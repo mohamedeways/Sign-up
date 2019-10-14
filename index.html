@@ -1,0 +1,373 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="" lang="">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Manager Dashboard </title>
+	<meta name="description" content="paxera Dashboard">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The faculty of AUC is a highly qualified group of academics and professionals who are committed to finding innovative ways to meet the educational needs of AUC students. The University's full-time faculty is complemented by an extensive adjunct teaching staff, frequent visiting lecturers and the Distinguished Visiting Professor program.">
+	<link rel="shortcut icon" href="http://www.aucegypt.edu/sites/all/themes/auc/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="https://favicon.io/?text=paxera&shape=circle&fontFamily=Dosis&fontSize=33&fontColor=%23ffffff&backgroundColor=%236db364">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<!-- Latest compiled and minified CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+	<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--  M ain Style -->
+	<link rel="stylesheet" href="./css/style.css" />
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="./css/datepicker.css" />
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	
+
+</head>
+
+<body onload="onloade()">
+
+	<!--  Start Navbar 	-->
+
+	<div class="navbar container navbar-default">
+
+		<div class="navbar-header">
+			<a class="logo navbar-btn pull-left" href="http://www.aucegypt.edu" title="Home">
+             <img src="images/AUC2.png" alt="Home">
+            </a>
+
+		</div>
+
+	</div>
+
+	<!--  End Navbar 	-->
+
+	<!-- Start Two Forms	-->
+
+
+	<div class="outer-content">
+
+		<div class="container">
+			<div class="row">
+				<form>
+
+					<div class="col-lg-12">
+						<div class="outer-box-center">
+							<div class="box">
+								<!--	Start AUCain form   -->
+
+								<fieldset title="Please Fill This Form to can Fill The other Form's visitor">
+									<legend>AUC Staff</legend>
+									<div class="row mb-10">
+										<div class="form-group">
+											<label class="col-md-3 control-label">Full Name</label>
+											<div class="col-md-9 inputGroupContainer">
+												<div class="input-group">
+													<span class="input-group-addon">
+											 <i class="fa fa-user"></i>
+											</span>
+													<input id="aucain_name" name="last_name" placeholder="First Name" class="form-control" type="text">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row mb-10">
+										<div class="form-group">
+											<label class="col-md-3 control-label">E-Mail</label>
+											<div class="col-md-9 inputGroupContainer">
+												<div class="input-group">
+													<span class="input-group-addon">
+											 <i class="fa fa-envelope-o"></i>
+										   </span>
+													<input id="aucain_mail" name="email" placeholder="E-Mail Address" class="form-control" type="text" readonly>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row mb-10">
+										<div class="form-group">
+											<label class="col-md-3 control-label">ID</label>
+											<div class="col-md-9 inputGroupContainer">
+												<div class="input-group">
+													<span class="input-group-addon">
+											 <i class="fa fa-id-card-o"></i>
+										   </span>
+													<input id="aucain_id" name="id" value="11" placeholder="Enter ID" class="form-control" type="text" readonly>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mt-25">
+										<div class="form-group">
+											<input class="col-md-1" type="checkbox" id="check_box" value="supress">
+											<label class="col-md-11" for="dna_headline_optin_supress">The University reserves the right to restrict the entry and presence of any individual or group on
+												  campus and to impose specific limitations or conditions related to the entry or presence of any
+												  individual or group on campus.
+											</label>
+										</div>
+									</div>
+
+								</fieldset>
+
+								<!--		End AUCain form -->
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-12">
+						<div class="outer-box-center" style="margin-top: 3vh;display: none;" id="visitor_form">
+							<div class="box">
+								<!--	form  -->
+								<fieldset>
+									<legend>Vistor</legend>
+									<div class="row mb-10">
+										<div class="form-group">
+											<div class="col-lg-1"></div>
+											<label class="col-md-3 control-label">Full Name</label>
+											<div class="col-md-8 inputGroupContainer">
+												<div class="input-group">
+													<span class="input-group-addon">
+                                         <i class="fa fa-user"></i>
+                                        </span>
+													<input name="last_name" placeholder="First Name" class="form-control" type="text">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-10">
+										<div class="form-group">
+											<div class="col-lg-1"></div>
+											<label class="col-md-3 control-label">E-Mail</label>
+											<div class="col-md-8 inputGroupContainer">
+												<div class="input-group">
+													<span class="input-group-addon">
+                                         <i class="fa fa-envelope-o"></i>
+                                       </span>
+													<input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-10">
+										<div class="form-group">
+											<div class="col-lg-1"></div>
+											<label class="col-md-3 control-label">Phone No</label>
+											<div class="col-md-8 inputGroupContainer">
+												<div class="input-group">
+													<span class="input-group-addon">
+                                         <i class="fa fa-phone"></i>
+                                       </span>
+													<input name="id" placeholder="Enter phone number" class="form-control" type="number">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-10">
+										<div class="form-group">
+											<div class="col-lg-1"></div>
+											<label class="col-md-3 control-label">Identy Card / Passport</label>
+											<div class="col-md-8 inputGroupContainer">
+												<div class="input-group">
+													<span class="input-group-addon">
+                                         <i class="fa fa-address-card"></i>
+                                       </span>
+													<input required name="id" placeholder="Enter identy card or passport" class="form-control" type="number">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-10">
+										<div class="form-group">
+											<div class="col-lg-1"></div>
+											<label class="col-md-3 control-label">Date of visit</label>
+											<div class="col-md-8 inputGroupContainer">
+												<div class="input-group date-time" id="datetimepicker">
+													<input class="form-control" /><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-10">
+										<div class="form-group">
+											<div class="col-lg-1"></div>
+											<label class="col-md-3 control-label" for="exampleFormControlTextarea2">Reason Type
+									</label>
+											<div class="col-md-8 inputGroupContainer">
+												<select class="form-control form-control-sm" id="exampleFormControlSelect2">
+											  <option>business</option>
+											  <option>educational</option>
+											  <option>personal</option>
+											</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-10">
+										<div class="form-group">
+											<div class="col-lg-1"></div>
+											<label class="col-md-3 control-label" for="exampleFormControlTextarea1">Reason of comming
+									</label>
+											<div class="col-md-8 inputGroupContainer">
+												<textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<!--						</form>-->
+
+							</div>
+						</div>
+					</div>
+
+				</form>
+				<!--	Start Button			-->
+				<div class="col-lg-12">
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<a disabled class="login100-form-btn"  style="background: none;cursor:not-allowed" href="submit.html">Submit</a>
+							
+						</div>
+					</div>
+				</div>
+
+				<!--				End button     -->
+			</div>
+			<!--			end row   -->
+		</div>
+		<!--		end container  -->
+	</div>
+	<!-- End outer-content	-->
+
+	<!-- Latest compiled and minified javascript library -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!--     start scripts code -->
+
+	<!--  My custom scripts 	-->
+	<script>
+		if (/Mobi/.test(navigator.userAgent)) {
+			// if mobile device, use native pickers
+			$(".date-time input").attr("type", "datetime-local");
+			$(".date input").attr("type", "date");
+			$(".time input").attr("type", "time");
+		} else {
+			// if desktop device, use DateTimePicker
+			$("#datetimepicker").datetimepicker({
+				icons: {
+					time: "fa fa-clock-o",
+					date: "fa fa-calendar",
+					up: "fa fa-chevron-up",
+					down: "fa fa-chevron-down",
+					next: "fa fa-chevron-right",
+					previous: "fa fa-chevron-left"
+				}
+			});
+			$("#datepicker").datetimepicker({
+				format: "L",
+				icons: {
+					next: "fa fa-chevron-right",
+					previous: "fa fa-chevron-left"
+				}
+			});
+			$("#timepicker").datetimepicker({
+				format: "LT",
+				icons: {
+					up: "fa fa-chevron-up",
+					down: "fa fa-chevron-down"
+				}
+			});
+		}
+	</script>
+
+	<script>
+		function get_data() {
+			// alert("fdgf0");
+			// get data by tag name and sort it in array 
+			var data = document.getElementsByTagName("input");
+			var reason = document.getElementsByTagName("textarea");
+			var meta_reason = document.getElementsByTagName("select");
+
+			//		for(var i =0 ; i<data.length ; i++){
+			//			console.log(data[i].value);
+			//		}
+			//		
+			var all_data = {
+				au_fullName: data[0].value,
+				au_mail: data[1].value,
+				au_id: data[2].value,
+				visitor_fullName: data[4].value,
+				visitor_mail: data[5].value,
+				visitor_phone: data[6].value,
+				visitor_Identy: data[7].value,
+				visitor_date: data[8].value,
+				reas: reason[0].value,
+				select_reason: meta_reason[0].value
+			}
+			console.log(all_data);
+			google.script.run.Check_Black_List(all_data);
+			google.script.run.withSuccessHandler(changePage).newPage('submit.html');
+		}
+
+		function onloade() {
+			console.log("*********")
+			google.script.run.withSuccessHandler(setusermail).get_user_mail();
+		}
+
+		function setusermail(mail) {
+			document.getElementById("aucain_mail").value = mail;
+		}
+	</script>
+
+	<!--	Jquery script to show box 2 by click check box  -->
+	<script>
+		$(document).ready(function() {
+			$("#check_box").click(function() {
+
+				$("#visitor_form").fadeToggle("slow");
+
+				$("html, body").animate({
+					scrollTop: 550
+				}, 1000);
+
+				$("button.login100-form-btn").removeAttr('disabled');
+				$("button.login100-form-btn").css("cursor", "pointer");
+
+			});
+		});
+	</script>
+
+	<!-- riquired fields	-->
+	<script>
+		//	function check_inputs() {
+
+
+		//				if (
+		//				document.getElementById('aucain_name').value == '' || 
+		//
+		//				)
+	</script>
+	<!--     End scripts code -->
+
+</body>
+
+</html>
